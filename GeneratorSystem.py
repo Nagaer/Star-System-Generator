@@ -17,7 +17,7 @@ PI = 3.14159265
 WIDTH = 1920
 HEIGHT = 1080
 
-ItN = 10
+ItN = 0
 
 BasePlanetSize = 150
 
@@ -103,6 +103,7 @@ class CStar:
         self.radius = radius
         self.color = color
 
+ItN = int(input("Введите кол-во нужных систем: "))
 for NumSystem in range(1, ItN+1):
 #==========================================================================================
 #Звезда
@@ -559,6 +560,6 @@ for NumSystem in range(1, ItN+1):
             PSys.paste(resource, (int(x3), int(y3)), resource)
     del draw
 
-    PSys.save('StarSystem'+str(NumSystem)+'.png')
+    PSys.save(os.path.abspath('result\\StarSystem'+str(NumSystem)+'.png'))
     if ItN == 1:
         PSys.show()
