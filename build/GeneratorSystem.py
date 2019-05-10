@@ -17,8 +17,6 @@ PI = 3.14159265
 WIDTH = 1920
 HEIGHT = 1080
 
-ItN = 0
-
 BasePlanetSize = 150
 
 class CSatellite:
@@ -115,37 +113,37 @@ for NumSystem in range(1, ItN+1):
         Star.radius = WIDTH/2*0.85
         Star.color = (66, 170, 255, 0)
         fon_color = (3, 12, 19)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_O_'+str(random.randint(1, 2))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_O_'+str(random.randint(1, 2))+'.png'))
     elif Star.specclass == 3 or Star.specclass == 4 or Star.specclass == 5:
         Star.radius = WIDTH/3*0.85
         Star.color = (176, 224, 230, 0)
         fon_color = (8, 18, 19)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_B_'+str(random.randint(1, 2))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_B_'+str(random.randint(1, 2))+'.png'))
     elif Star.specclass == 6 or Star.specclass == 7 or Star.specclass == 8 or Star.specclass == 9:
         Star.radius = WIDTH/4*0.85
         Star.color = (255, 255, 255, 0)
         fon_color = (18, 18, 18)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_A_'+str(random.randint(1, 3))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_A_'+str(random.randint(1, 3))+'.png'))
     elif Star.specclass == 10 or Star.specclass == 11 or Star.specclass == 12:
         Star.radius = WIDTH/5*0.85
         Star.color = (255, 226, 183, 0)
         fon_color = (21, 22, 17)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_F_'+str(random.randint(1, 3))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_F_'+str(random.randint(1, 3))+'.png'))
     elif Star.specclass == 13 or Star.specclass == 14:
         Star.radius = WIDTH/6*0.85
         Star.color = (252, 232, 131, 0)
         fon_color = (11, 11, 0)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_G_'+str(random.randint(1, 3))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_G_'+str(random.randint(1, 3))+'.png'))
     elif Star.specclass == 15:
         Star.radius = WIDTH/7*0.85
         Star.color = (237, 118, 14, 0)
         fon_color = (21, 11, 1)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_K_'+str(random.randint(1, 3))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_K_'+str(random.randint(1, 3))+'.png'))
     elif Star.specclass == 16:
         Star.radius = WIDTH/8*0.85
         Star.color = (255, 0, 51, 0)
         fon_color = (21, 1, 0)
-        star = Image.open(os.path.abspath('build\\texture\\star\\Class_M_'+str(random.randint(1, 2))+'.png'))
+        star = Image.open(os.path.abspath('texture\\star\\Class_M_'+str(random.randint(1, 2))+'.png'))
     x1, x2, x3, x4 = star.getpixel((star.size[0] - 5, star.size[1] - 5))
     fon_color = (x1, x2, x3)
     StarSystem = []
@@ -457,31 +455,31 @@ for NumSystem in range(1, ItN+1):
         draw.arc([0-(Star.radius+s*i), HEIGHT/2-(Star.radius+s*i), 0+(Star.radius+s*i), HEIGHT/2+(Star.radius+s*i)], -90, 90, fill = (255, 255, 255, 0))
         
         if StarSystem[i-1].type == TOP_OCEAN:
-            planet = Image.open(os.path.abspath('build\\texture\ocean\MapOcean'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\ocean\MapOcean'+str(random.randint(1, 30))+'.png'))
             color_planet = (66, 170, 255)
         elif StarSystem[i-1].type == TOP_VULCAN:
-            planet = Image.open(os.path.abspath('build\\texture\wulcan\MapVulcan'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\wulcan\MapVulcan'+str(random.randint(1, 30))+'.png'))
             color_planet = (255, 0, 0)
         elif StarSystem[i-1].type == TOP_TOXIC:
-            planet = Image.open(os.path.abspath('build\\texture\\toxic\\MapToxic'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\toxic\\MapToxic'+str(random.randint(1, 30))+'.png'))
             color_planet = (255, 255, 0)
         elif StarSystem[i-1].type == TOP_LIFELESS:
-            planet = Image.open(os.path.abspath('build\\texture\\lifeless\\MapLifeless'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\lifeless\\MapLifeless'+str(random.randint(1, 30))+'.png'))
             color_planet = (192, 192, 192)
         elif StarSystem[i-1].type == TOP_ICE:
-            planet = Image.open(os.path.abspath('build\\texture\\ice\\MapIce'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\ice\\MapIce'+str(random.randint(1, 30))+'.png'))
             color_planet = (255, 255, 255)
         elif StarSystem[i-1].type == TOP_GAS:
-            planet = Image.open(os.path.abspath('build\\texture\\gas\\MapGas'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\gas\\MapGas'+str(random.randint(1, 30))+'.png'))
             color_planet = (128, 0, 128)
         elif StarSystem[i-1].type == TOP_EARTH:
-            planet = Image.open(os.path.abspath('build\\texture\\earth\\MapEarth'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\earth\\MapEarth'+str(random.randint(1, 30))+'.png'))
             color_planet = (0, 0, 255)
         elif StarSystem[i-1].type == TOP_DESERT:
-            planet = Image.open(os.path.abspath('build\\texture\\desert\\MapDesert'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\desert\\MapDesert'+str(random.randint(1, 30))+'.png'))
             color_planet = (255, 165, 0)
         elif StarSystem[i-1].type == TOP_JUNGLE:
-            planet = Image.open(os.path.abspath('build\\texture\\jungle\\MapJungle'+str(random.randint(1, 30))+'.png'))
+            planet = Image.open(os.path.abspath('texture\\jungle\\MapJungle'+str(random.randint(1, 30))+'.png'))
             color_planet = (0, 128, 0)
         planet = planet.resize((BasePlanetSize + StarSystem[i-1].size*50, BasePlanetSize + StarSystem[i-1].size*50), Image.ANTIALIAS)
         
@@ -499,17 +497,17 @@ for NumSystem in range(1, ItN+1):
         for j in range(NumRes):
             TypeRes = StarSystem[i-1].res[j]
             if TypeRes == 1:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\Lightning.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\Lightning.png'))
             elif TypeRes == 2:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\Chemical.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\Chemical.png'))
             elif TypeRes == 3:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\FavConditions.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\FavConditions.png'))
             elif TypeRes == 4:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\SimpleMet.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\SimpleMet.png'))
             elif TypeRes == 5:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\StrategicMet.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\StrategicMet.png'))
             elif TypeRes == 6:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\RareMet.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\RareMet.png'))
             resource = resource.resize((30, 30), Image.ANTIALIAS)
             draw.arc([x0 - (BasePlanetSize + StarSystem[i-1].size*50)/2 - 30, y0 - (BasePlanetSize + StarSystem[i-1].size*50)/2 - 30,
                       x0 + (BasePlanetSize + StarSystem[i-1].size*50)/2 + 30, y0 + (BasePlanetSize + StarSystem[i-1].size*50)/2 + 30],
@@ -524,15 +522,15 @@ for NumSystem in range(1, ItN+1):
         for k in range(NumS):
             S = StarSystem[i-1].satellite[k].type
             if S == TOP_LIFELESS:
-                sputnik = Image.open(os.path.abspath('build\\texture\\lifeless\\MapLifeless'+str(random.randint(1, 10))+'.png'))
+                sputnik = Image.open(os.path.abspath('texture\\lifeless\\MapLifeless'+str(random.randint(1, 10))+'.png'))
             elif S == TOP_ICE:
-                sputnik = Image.open(os.path.abspath('build\\texture\\ice\\MapIce'+str(random.randint(1, 10))+'.png'))
+                sputnik = Image.open(os.path.abspath('texture\\ice\\MapIce'+str(random.randint(1, 10))+'.png'))
             elif S == TOP_TOXIC:
-                sputnik = Image.open(os.path.abspath('build\\texture\\toxic\\MapToxic'+str(random.randint(1, 10))+'.png'))
+                sputnik = Image.open(os.path.abspath('texture\\toxic\\MapToxic'+str(random.randint(1, 10))+'.png'))
             elif S == TOP_VULCAN:
-                sputnik = Image.open(os.path.abspath('build\\texture\\wulcan\\MapVulcan'+str(random.randint(1, 10))+'.png'))
+                sputnik = Image.open(os.path.abspath('texture\\wulcan\\MapVulcan'+str(random.randint(1, 10))+'.png'))
             elif S == TOP_OCEAN:
-                sputnik = Image.open(os.path.abspath('build\\texture\\ocean\\MapOcean'+str(random.randint(1, 10))+'.png'))
+                sputnik = Image.open(os.path.abspath('texture\\ocean\\MapOcean'+str(random.randint(1, 10))+'.png'))
             sputnik = sputnik.resize((60, 60), Image.ANTIALIAS)
             x2 = (xS - x0)*math.cos(-k*math.pi/2/NumS/1.2 - math.pi/9) - (yS - y0)*math.sin(-k*math.pi/2/NumS/1.2-math.pi/9) + x0
             y2 = (xS - x0)*math.sin(-k*math.pi/2/NumS/1.2 - math.pi/9) + (yS - y0)*math.cos(-k*math.pi/2/NumS/1.2-math.pi/9) + y0
@@ -545,21 +543,24 @@ for NumSystem in range(1, ItN+1):
             
             TypeRes = StarSystem[i-1].satellite[k].res
             if TypeRes == 1:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\Lightning.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\Lightning.png'))
             elif TypeRes == 2:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\Chemical.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\Chemical.png'))
             elif TypeRes == 3:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\FavConditions.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\FavConditions.png'))
             elif TypeRes == 4:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\SimpleMet.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\SimpleMet.png'))
             elif TypeRes == 5:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\StrategicMet.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\StrategicMet.png'))
             elif TypeRes == 6:
-                resource = Image.open(os.path.abspath('build\\texture\\res\\RareMet.png'))
+                resource = Image.open(os.path.abspath('texture\\res\\RareMet.png'))
             resource = resource.resize((30, 30), Image.ANTIALIAS)
             PSys.paste(resource, (int(x3), int(y3)), resource)
+    watermark = Image.open(os.path.abspath('texture\\Watermark.png'))
+    watermark = watermark.resize((300, 50), Image.ANTIALIAS)
+    PSys.paste(watermark, (WIDTH-300, HEIGHT-50), watermark)
     del draw
 
-    PSys.save(os.path.abspath('build\\result\\StarSystem'+str(NumSystem)+'.png'))
+    PSys.save(os.path.abspath('result\\StarSystem'+str(NumSystem)+'.png'))
     if ItN == 1:
         PSys.show()
